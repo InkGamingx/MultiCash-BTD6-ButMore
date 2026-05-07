@@ -37,7 +37,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.PopIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble EcoMultiplier = new(1.0)
@@ -47,7 +47,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.BananaFarmIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble BankMultiplier = new(1.0)
@@ -57,7 +57,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.MonkeyBankUpgradeIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble CoopMultiplier = new(1.0)
@@ -67,7 +67,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.Coop2PlayerIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble SellingMultiplier = new(1.0)
@@ -77,7 +77,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.SellingDisabledIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble BuyingMultiplier = new(1.0)
@@ -87,7 +87,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.BattleTowerPropIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble UpgradingMultiplier = new(1.0)
@@ -97,7 +97,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.UpgradeBtn,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble GeraldoMultiplier = new(1.0)
@@ -107,7 +107,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.GeraldoIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble MapMultiplier = new(1.0)
@@ -117,7 +117,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.GiftBoxIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble PropMultiplier = new(1.0)
@@ -127,7 +127,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.PortableLakeIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble QuestMultiplier = new(1.0)
@@ -137,7 +137,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.QuestIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     public static readonly ModSettingDouble CorvusMultiplier = new(1.0)
@@ -147,7 +147,7 @@ public class MultiCash : BloonsTD6Mod
         category = SourceMultipliers,
         icon = VanillaSprites.CorvusIcon,
         min = 0.0,
-        max = 100.0
+        max = 2147483647.0
     };
 
     private static readonly Dictionary<Simulation.CashSource, ModSettingDouble> Multipliers = new()
@@ -177,7 +177,7 @@ public class MultiCash : BloonsTD6Mod
             {
                 if (double.TryParse(value, out var multiplier))
                 {
-                    GlobalMultiplier.SetValue(Math.Clamp(multiplier, 0.01, 100.0));
+                    GlobalMultiplier.SetValue(Math.Clamp(multiplier, 0.01, 2147483647.0));
                 }
             }),
             ((double)GlobalMultiplier).ToString()
